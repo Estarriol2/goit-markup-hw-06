@@ -1,0 +1,794 @@
+:root {
+    --primery-text-color: #212121;
+    --secondary-text-color: #2196F3;
+    --third-text-color: #757575;
+    --page-bg-color: #FFFFFF;
+}
+
+html {
+    box-sizing: border-box;
+  }
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+
+body h2 {
+    font-family: 'Roboto';
+    color: var(--primery-text-color);
+    font-size: 36px;
+    text-align: center;
+    margin-top: 0px;
+
+}
+body h3 {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    color: var(--primery-text-color);
+    
+    /* border: 1px solid; */
+}
+
+h2, ul { 
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px;
+}
+li {
+    margin-bottom: 0px;
+    list-style-type: none;
+}
+p {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto';
+    color: var(--third-text-color);
+    font-weight: 400;     /* вопрос? ставить слово типа bold,regular ..... или цифры? */
+    font-size: 14px;
+    line-height: 1.71;
+}
+a {
+    text-decoration: none;
+}
+
+
+.current::after{
+    position: absolute;
+    display: block;
+    content: "";
+    bottom: 0;
+    left: 0;
+
+    border-radius: 2px;
+
+    width: 100%;
+    height: 4px;
+    
+    background-color: #2196F3;
+    
+}
+
+/* .conteiner-------------------------*/
+
+.conteiner{
+    
+    text-align: center;
+    width: 1200px;                 
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    /* outline: 1px solid tomato; */
+}
+/* header---------------------------- */
+
+header {
+    color: var(--primery-text-color); 
+    background-color: var(--page-bg-color);
+    font-family: 'Roboto';
+    font-weight: 400; 
+    font-size: 14px;
+    line-height: 1.14;
+    border-bottom: 1px solid #ECECEC;
+
+    
+}
+
+.main-header{
+    display: block;
+}
+
+.header{
+    display: flex; 
+}
+
+.main-nav{
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    padding: 20px 0;
+
+    color: var(--secondary-text-color);
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.17;
+    text-decoration: none;
+}
+
+header span {
+    color: #000000;
+    line-height: 1.38;
+}
+
+
+.site-nav{
+    
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left: 93px;
+}
+
+.site-nav .item + .item{
+    margin-left: 50px;   
+}
+
+.site-nav .link {
+    position: relative;
+    color: var(--primery-text-color);
+    padding: 32px 0px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+
+
+.site-nav .link:hover,         
+.site-nav .link:focus {
+
+    color: var(--secondary-text-color);
+}
+
+.item{
+   
+}
+
+.contacts {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    
+}
+
+.contacts .item + .item{
+    margin-left: 50px;
+}
+
+.contacts .item{
+    display: block;
+    align-items: center;
+    position: relative;
+}
+
+.contacts .link {
+    color: var(--third-text-color);
+    fill: #757575;
+    padding: 32px 0px;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+
+}
+
+.contacts svg{
+    margin-right: 10px;
+}
+
+.contacts .link:hover,
+.contacts .link:focus {
+    color: var(--secondary-text-color);
+    fill: var(--secondary-text-color);
+}
+
+
+/* main-hero--------------------------------------------- */
+
+.main-hero{
+   max-width: 1600px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.overlay{
+    max-width: 1600px;
+    background: rgba(47, 58, 52, 0.4);
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 58, 52, 0.4),
+        rgba(47, 58, 52, 0.4)
+    ), 
+    url(../image/Hero.jpg);
+    object-fit: fill;
+    padding-top: 200px;
+    padding-bottom: 200px;
+} 
+
+.hero h1{
+    display: block;
+    margin: 0px;
+    font-size: 44px;
+    color: #FFFFFF;
+    padding-bottom: 30px;
+    
+}
+.hero-button {
+    display: block;
+    box-sizing: border-box;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--secondary-text-color);
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+    .hero-button:hover,
+    .hero-button:focus{
+        cursor: pointer;
+        background-color: #188CE8;
+        
+    }
+
+/* features-------------------------------------------------------- */
+
+
+.features {
+    padding-top: 94px;
+    
+}
+.features-list{
+    display: flex;
+    text-align: left;
+
+}
+
+.features-list .features-icons{
+    display: flex;
+    width: 270px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    
+}
+
+
+.features-list .item:not(:last-child){
+    padding-right: 30px;
+}
+.features ul{
+    margin: 0px;
+}
+
+.features h3{
+    text-transform: uppercase;
+}
+
+/* introduce -----------------------------------------*/
+
+.introduce {
+    display: block;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.introduce h2{
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+.introduce-list{
+    display: flex;
+}
+
+.introduce-list .item{
+    display: block;
+}
+
+.introduce-list img{
+    display: block;
+}
+
+.introduce .discription{
+    
+    position: relative;
+}
+
+.introduce .img-item{
+    
+
+}
+
+.introduce .item-discription{
+    position: absolute;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    justify-content: center;
+    color: #FFFFFF;
+    line-height: 1.14;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.introduce-list .item + .item{
+    margin-left: 30px;
+}
+.introduce ul{
+    
+    margin-bottom: 0px;
+}
+
+
+/* main-team ------------------------------------------------*/
+
+.main-team{
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: #F5F4FA;
+}
+.team {
+    display: block;
+}
+.team h2{
+    display: block;
+    margin: 0px;
+}
+
+.team-list{
+    display: flex;
+    margin: 0px;
+    padding-top: 50px;
+}
+
+.team-list .item{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: var(--page-bg-color);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-list .item + .item{
+    margin-left: 30px;
+}
+
+.team-hero {
+    padding-top: 30px;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.team p {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+
+.team-social{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.team-icons{
+    display: flex;
+}
+
+
+
+.team-icon{
+    display: flex;
+
+    margin-left: 10px;
+
+    fill: #AFB1B8;
+    width: 44px;
+    height: 44px; 
+    justify-content: center;
+    align-items: center;
+
+    transition-property: fill, background-color, border-radius;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+
+
+}
+
+.team-icon:first-child{
+    margin-left: 0px;
+}
+
+.team-icon:hover,
+.team-icon:focus
+{
+    fill: #FFFFFF;
+    background-color: #2196F3;
+    border-radius: 50%;
+}
+
+
+
+/* .team-hero .team-icon + .team-icon{}
+     вопрос? как этой записью заменить first-child */
+ 
+
+/* clients---------------------------------------------------- */
+
+.clients {
+    padding-top: 94px;
+}
+
+.clients-lists {
+    margin-top: 50px;
+}
+
+.clients-list{
+    display: flex;
+    padding-bottom: 94px;
+}
+
+
+
+.clients-icons{
+
+    display: flex;
+
+    margin-left: 30px;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    fill: #AFB1B8;
+
+    transition-property: border, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+
+}
+.clients-icons:hover,
+.clients-icons:focus{
+    border: 1px solid var(--secondary-text-color);
+    fill: var(--secondary-text-color);
+}
+
+.clients-icons:first-child{
+    margin-left: 0px;
+}
+
+.clients-icon{
+    
+}
+
+/* footer------------------------------------------------- */
+
+footer {
+    font-family: Roboto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2F303A;
+}
+
+footer a{
+    font-style: normal;    /* вопрос? нормал должно быть значением по умолчанию, где оно стало италик? */
+}
+
+footer address{
+    text-align: left;
+}
+
+footer .logo {
+    display: block;
+    padding-bottom: 20px;
+}
+
+footer .logo span {
+    color: #FFFFFF;
+}
+
+footer .location {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.71;
+}
+footer .mail {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration: none;
+}
+footer .tel {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration: none;
+}
+
+footer .socials h2{
+    padding: 12px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: left;
+    
+}
+
+.footer{
+    display: flex;
+}
+
+
+.footer .socials{
+    
+    margin-left: 70px;
+}
+
+.socials-links{
+    display: flex;
+}
+
+.footer .social-icons{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.social-icon:first-child{
+    margin-left: 0px;
+}
+
+.footer .social-icon{
+    display: flex;
+    align-items: center;
+    
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    fill: #FFFFFF;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+.footer .social-icon:hover,
+.footer .social-icon:focus{
+    background-color: var(--secondary-text-color);
+}
+
+
+
+/* Портфолио -----------------------------------------------------------------*/
+
+
+
+.select {
+    display: flex;
+    justify-content: center;
+    margin-top: 94px;
+    margin-bottom: 50px;  
+}
+.select .item {
+    
+}
+
+.filters-main .item + .item{
+    margin-left: 8px;
+}
+
+.filters-main .link {
+    display: block;
+    padding: 6px 22px;
+    border-radius: 4px;
+    color: var(--primery-text-color);
+    background-color: #F5F4FA;
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filters-main .link:hover,
+.filters-main .link:focus {
+    color: #FFFFFF;
+    background-color: var(--secondary-text-color);
+}
+
+/* works-list----------------------------------------------- */
+
+.works-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 94px;
+    /* margin: -15px; */
+}
+.works-items {   /* вопрос?  не влазят элементы в строку по 3 штуки если не задать ширину 370 и без рамки влазят, а с рамкой не влазят*/
+    padding-bottom: 20px;
+    margin-right: 30px;
+    margin-bottom: 30px; 
+    /* margin: 15px; */
+    text-align: left;  
+    width: 370px;           
+    border: 1px solid #EEEEEE;
+    
+    transition: box-shadow 2520ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.works-items:hover,
+.works-items:focus
+{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.works-items:last-child {
+    margin-right: 0px;
+}
+.works-items h2 {
+    margin-bottom: 4px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2; 
+    text-align: left;
+    padding-left: 25px;
+
+}
+
+.works-items p {
+    
+    font-size: 16px;
+    line-height: 1.89; 
+    padding-left: 24px;
+    padding-right: 24px;
+    
+}
+
+.works-items:nth-child(3n) {
+    margin-right: 0px;
+}
+
+ .works-items:nth-last-child(-n + 3) { 
+    margin-bottom: 0px;
+} 
+
+.works-item {
+ 
+}
+
+.works-image{
+    position: relative;   
+    display: block;
+    overflow: hidden;
+}
+
+
+
+.works-discription .discription{
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.56;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0;
+}
+
+
+.works-items:hover .discription{
+    transform: translateY(-100%);
+}
+
+
+/* backdrop---------------------------------------- */
+
+.backdrop{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden{
+    
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+    min-height: 528px;
+    min-width: 581px;
+    padding: 15px;
+
+    background-color: #FFFFFF;
+}
+
+
+
+.modal button{
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 8px;
+
+    transition: fill, transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.backdrop svg{
+    padding: 0%;
+ 
+}
+
+.modal button:hover,
+.modal button:focus
+{
+    
+    fill: red;
+}
+
+
